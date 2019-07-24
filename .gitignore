@@ -4,8 +4,8 @@
 [Bb]uild/
 [Bb]uilds/
 
-Library\PackageCache\*
-Library\metadata*
+Library/PackageCache*
+Library/metadata*
 TestBuild_6:10.app/
 TestBuild_6:11.app/
 TestBuild_6:11*
