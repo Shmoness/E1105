@@ -48546,7 +48546,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1099461212}
-        m_MethodName: Next
+        m_MethodName: Prev
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -80009,6 +80009,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CameraMotion: {fileID: 963194229}
   m_Water: {fileID: 1111801742}
+  m_TextBox: {fileID: 1264439300}
+  m_TextSprites:
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 6a8efd438aa9a47fa9af0ee613bdc6d4, type: 3}
+  - {fileID: 21300000, guid: 922f0e35f1ceb4670ba1285b5bc9f86a, type: 3}
+  - {fileID: 21300000, guid: 930ead798b8024f71bcc1dd72e54c449, type: 3}
+  - {fileID: 21300000, guid: 080c9328a88b64b0cafaa7c776bcba91, type: 3}
 --- !u!4 &1099461213
 Transform:
   m_ObjectHideFlags: 0
@@ -80029,7 +80036,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh13038
+  m_Name: pb_Mesh13112
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -89771,8 +89778,9 @@ GameObject:
   - component: {fileID: 1264439299}
   - component: {fileID: 1264439301}
   - component: {fileID: 1264439300}
+  - component: {fileID: 1264439302}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ProcedureText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89810,14 +89818,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
+  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ff61928c2b4f0412883d8b7298c055d9, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -89834,6 +89842,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264439298}
   m_CullTransparentMesh: 0
+--- !u!225 &1264439302
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264439298}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1339162830
 GameObject:
   m_ObjectHideFlags: 0
