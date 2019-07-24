@@ -6,6 +6,7 @@ public class MasterControl : MonoBehaviour
 {
     public Animator m_CameraMotion;
     public ParticleSystem m_Water;
+    public Image m_TextBox;
 
     // Start is called before the first frame update
     void Start()
