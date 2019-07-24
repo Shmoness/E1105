@@ -3,7 +3,7 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
-[Pp]ackageCache/
+Library/Package*
 TestBuild_6:10.app/
 TestBuild_6:11.app/
 TestBuild_6:11*
