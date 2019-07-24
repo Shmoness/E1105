@@ -4,7 +4,7 @@
 [Bb]uild/
 [Bb]uilds/
 
-Library/PackageCache*
+Library/PackageCache/
 TestBuild_6:10.app/
 TestBuild_6:11.app/
 TestBuild_6:11*
