@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GeneralState : StateMachineBehaviour
+public class State1 : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -10,7 +10,7 @@ public class GeneralState : StateMachineBehaviour
         animator.SetBool("Next", false);
         animator.SetBool("Prev", false);
 
-        animator.SetInteger("State", 0);
+        animator.SetInteger("State", 1);
 
         animator.SetBool("Water", false);
     }
