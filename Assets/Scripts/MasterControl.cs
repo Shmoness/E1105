@@ -28,11 +28,6 @@ public class MasterControl : MonoBehaviour
         else if (!m_CameraMotion.GetBool("Water") && waterActive)
             DeactivateWater();
 
-        if (m_CameraMotion.GetInteger("State") == 0)
-            m_Text.alpha = 0;
-        else
-            m_Text.alpha = 1;
-
         UpdateText();
     }
 
