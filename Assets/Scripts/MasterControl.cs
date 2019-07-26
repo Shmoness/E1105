@@ -7,7 +7,7 @@ public class MasterControl : MonoBehaviour
 {
     public Animator m_CameraMotion;
     public ParticleSystem m_Water;
-    //public CanvasGroup m_TextBox;
+    public CanvasGroup m_Text;
     public Image m_TextBox;
     public Sprite[] m_TextSprites = new Sprite[5];
 
@@ -27,6 +27,8 @@ public class MasterControl : MonoBehaviour
             ActivateWater();
         else if (!m_CameraMotion.GetBool("Water") && waterActive)
             DeactivateWater();
+
+        UpdateText();
     }
 
     public void Next()
@@ -54,5 +56,10 @@ public class MasterControl : MonoBehaviour
     public void UpdateText()
     {
         m_TextBox.sprite = m_TextSprites[m_CameraMotion.GetInteger("State")];
+    }
+
+    public void Reset()
+    {
+        m_CameraMotion.Play("Camera_1", 0, 0f);
     }
 }
