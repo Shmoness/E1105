@@ -24,6 +24,7 @@ public class State3 : StateMachineBehaviour
         if (timer <= 0.0f)
         {
             animator.SetInteger("State", 3);
+            animator.SetBool("Water", true);
         }
     }
 
