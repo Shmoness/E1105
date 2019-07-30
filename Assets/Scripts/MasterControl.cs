@@ -11,10 +11,14 @@ public class MasterControl : MonoBehaviour
     public Image m_TextBox;
     public Sprite[] m_TextSprites = new Sprite[5];
 
+    public Animator m_PIP;
+    public Camera m_PIPCam;
+
     private string[] m_States = {"Rotate_1", "Zoom_2", "Rotate_3", "Rotate_4", "Zoom_5", "Rotate_6", "Rotate_7", "Zoom_8", "Zoom_9", "Rotate_10", "Rotate_11", "Rotate_12", "Zoom_13", "End"};
     private int m_CurrentState;
 
     private bool waterActive;
+    private bool pipActive;
 
     private bool singleClick;
     private float doubleClickTime = 0.5f;
@@ -25,6 +29,7 @@ public class MasterControl : MonoBehaviour
     {
         m_Water.Stop();
         waterActive = false;
+        pipActive = false;
 
         m_CurrentState = 0;
         singleClick = false;
@@ -37,6 +42,11 @@ public class MasterControl : MonoBehaviour
             ActivateWater();
         else if (!m_CameraMotion.GetBool("Water") && waterActive)
             DeactivateWater();
+
+        if (m_CameraMotion.GetBool("PIP") && !pipActive)
+            ActivatePIP();
+        else if (!m_CameraMotion.GetBool("PIP") && pipActive)
+            DeactivatePIP();
 
         UpdateText();
 
@@ -85,6 +95,19 @@ public class MasterControl : MonoBehaviour
     {
         m_Water.Stop();
         waterActive = false;
+    }
+
+    private void ActivatePIP()
+    {
+        m_PIPCam.depth = 0;
+        m_PIP.Play("Picture in Picture Animation", 0, 0f);
+        pipActive = true;
+    }
+
+    private void DeactivatePIP()
+    {
+        m_PIPCam.depth = -1;
+        pipActive = false;
     }
 
     public void UpdateText()
