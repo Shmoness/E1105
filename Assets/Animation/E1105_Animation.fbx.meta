@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 323951d27451a4881979fd8adee88482
+guid: cea5ccfc5472e47b1acf3efdbab050c7
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
-      74: 8440248360967096626
-    second: Scene 3_WithoutLocation
+      74: -4635203214591382726
+    second: CameraAction
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Scene 3_WithoutLocation
-      takeName: Camera|CameraAction
-      internalID: 8440248360967096626
-      firstFrame: 753
-      lastFrame: 1503
+      name: CameraAction
+      takeName: CameraAction
+      internalID: -4635203214591382726
+      firstFrame: 0
+      lastFrame: 3401
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -165,7 +165,7 @@ ModelImporter:
       takeName: Camera|CameraAction
       internalID: -3019250738160791103
       firstFrame: 755
-      lastFrame: 955
+      lastFrame: 975
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -193,7 +193,7 @@ ModelImporter:
       name: Camera|CamRotate_4
       takeName: Camera|CameraAction
       internalID: -7954336695170304460
-      firstFrame: 1015
+      firstFrame: 1005
       lastFrame: 1400
       wrapMode: 0
       orientationOffsetY: 0
