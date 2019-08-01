@@ -14,6 +14,8 @@ public class MasterControl : MonoBehaviour
     public Animator m_PIP;
     public Camera m_PIPCam;
 
+    public GameObject m_TextBoxBackground;
+
     private string[] m_States = {"Rotate_1", "Zoom_2", "Rotate_3", "Rotate_4", "Zoom_5", "Rotate_6", "Rotate_7", "Zoom_8", "Zoom_9", "Rotate_10", "Rotate_11", "Rotate_12", "Zoom_13", "End"};
     private int m_CurrentState;
 
@@ -56,6 +58,11 @@ public class MasterControl : MonoBehaviour
             if (timeElapsed > doubleClickTime)
                 singleClick = false;
         }
+
+        if(m_CameraMotion.GetInteger("State") == 0)
+            m_TextBoxBackground.SetActive(true);
+        else
+            m_TextBoxBackground.SetActive(false);
     }
 
     public void Next()
@@ -66,6 +73,7 @@ public class MasterControl : MonoBehaviour
         {
             m_CurrentState++;
             m_CameraMotion.Play("Camera|Cam" + m_States[m_CurrentState], 0, 0f);
+
         }
     }
 
@@ -123,3 +131,41 @@ public class MasterControl : MonoBehaviour
         singleClick = false;
     }
 }
+
+
+/*
+private void Update()
+{
+    if (Input.GetKeyDown(KeyCode.F))
+    {
+        StartCoroutine(Lerp_MeshRenderer_Color(value, value, value, value));
+    }
+}
+private IEnumerator Lerp_MeshRenderer_Color(MeshRenderer target_MeshRender, float lerpDuration, Color startLerp, Color targetLerp)
+{
+    float lerpStart_Time = Time.time;
+    float lerpProgress;
+    bool lerping = true;
+    while (lerping)
+    {
+        yield return new WaitForEndOfFrame();
+        lerpProgress = Time.time - lerpStart_Time;
+        if (target_MeshRender != null)
+        {
+            target_MeshRender.material.color = Color.Lerp(startLerp, targetLerp, lerpProgress / lerpDuration);
+        }
+        else
+        {
+            lerping = false;
+        }
+
+
+        if (lerpProgress >= lerpDuration)
+        {
+            lerping = false;
+        }
+    }
+    yield break;
+}
+
+    */

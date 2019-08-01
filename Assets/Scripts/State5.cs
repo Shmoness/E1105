@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class State3_PIP : StateMachineBehaviour
+public class State5 : StateMachineBehaviour
 {
     public float UIDelay;
     private float timer;
@@ -23,17 +23,16 @@ public class State3_PIP : StateMachineBehaviour
 
         if (timer <= 0.0f)
         {
-            animator.SetInteger("State", 3);
-            animator.SetBool("Water", true);
-            animator.SetBool("PIP", true);
+            animator.SetInteger("State", 5);
+            animator.SetBool("Water", false);
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        animator.SetBool("PIP", false);
-    }
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    
+    //}
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
