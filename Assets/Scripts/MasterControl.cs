@@ -16,7 +16,7 @@ public class MasterControl : MonoBehaviour
 
     public GameObject m_TextBoxBackground;
 
-    private string[] m_States = {"Rotate_1", "Zoom_2", "Rotate_3", "Rotate_4", "Zoom_5", "Rotate_6", "Rotate_7", "Zoom_8", "Zoom_9", "Rotate_10", "Rotate_11", "Rotate_12", "Zoom_13", "End"};
+    private string[] m_States = {"Rotate_1", "Zoom_2", "Rotate_3", "Rotate_4", "Zoom_5", "Rotate_6", "Zoom_9", "Rotate_10", "Rotate_11", "Zoom_13", "End"};
     private int m_CurrentState;
 
     private bool waterActive;
